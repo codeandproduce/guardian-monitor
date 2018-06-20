@@ -1,0 +1,19 @@
+.one-device-tracking{
+	width:100%;
+	background-color:white;
+	border-radius:10px;
+	margin-bottom:20px;
+	padding:40px;
+}
+.tracker-identification{
+	color:#475769;
+	font-weight:100;
+	font-size:25px;
+	text-decoration: underline;
+}
+.tracker-graph{
+	height:300px;
+}
+.chartjs-render-monitor{
+	height:300px;
+}

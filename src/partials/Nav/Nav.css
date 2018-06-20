@@ -1,0 +1,55 @@
+.nav{
+	height:55px;
+	background-color:#201c1c;
+	text-align:center;
+	width:100%;
+}
+.nav-heading{
+	color:white;
+	font-size:23px;
+	font-weight:100;
+	text-align: center;
+	display:inline;
+	position:absolute;
+	left:0;
+	right:0;
+	top:13px;
+}
+h1{
+	margin:0;
+}
+
+.contain-plus{
+	display:inline-block;
+	position:relative;
+	float:right;
+	height:100%;
+	margin-right:20px;
+	width:200px;
+}
+.contain-plus > p{
+	position:absolute;
+	right:40px;
+	display:inline;
+	color: white;
+	margin:0;
+	top:19px;
+
+}
+.contain-plus > button {
+	float:right;
+	display:inline;
+	height:30px;
+	width:30px;
+	border:0;
+	padding:0;
+	background: transparent; 
+	filter:invert(100%);
+	margin-top:12px;
+
+}
+
+.plus-btn{
+	height:100%;
+	width:100%;
+}

@@ -1,0 +1,41 @@
+.modal-box{
+	font-weight:100;
+	padding:70px 120px;
+	background-color:#465298;
+	border:3px solid white;
+
+}
+.ReactModal__Content--after-open{
+	background:none !important;
+	border:none !important;
+}
+.modal-box-heading{
+	font-size:40px;
+	color:white;
+	width:100%;
+	text-align: center;
+	font-weight:100 !important;
+
+}
+
+.authenticate-new-device{
+	margin-top:30px;
+}
+
+.authenticate-new-device > label{
+	color:white;
+	width:100%;
+	text-align: center;
+	font-size:25px;
+	font-weight:100 !important;
+}
+
+
+.authenticate-new-device > input{
+	margin-top:10px;
+	color:white;
+	width:80%;
+	padding:5px;
+	text-align: center;
+	font-size:25px;
+}
