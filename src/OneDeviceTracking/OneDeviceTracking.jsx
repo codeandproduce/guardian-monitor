@@ -9,15 +9,15 @@ import {Line} from 'react-chartjs-2';
 function template() {
 	return (
 	    <div className="one-device-tracking">
-	      <h1 className="tracker-identification">{this.props.device_use} | Device ID: {this.props.device_id}</h1>
+	      	<h1 className="tracker-identification">{this.props.device_use} | Device ID: {this.props.device_id}</h1>
 			<Line
+				className="a-graph"
 				data={this.state.data}
-				width={100}
-				height={300}
+				width={'80%'}
+				height={'300px'}
 				options={{
 					maintainAspectRatio: false,
 					lineTension: 0,
-					animation: false,
 					scales: {
 		                yAxes : [{
 		                    ticks : {
@@ -26,7 +26,11 @@ function template() {
 		                    }
 		                }]
 		            },
-				}}/>
+			}}/>
+			<div className="tracker-options">
+				<button></button>
+				<button></button>
+			</div>
 
 		</div>
 

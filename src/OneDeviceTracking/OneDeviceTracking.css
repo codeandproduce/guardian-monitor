@@ -17,3 +17,13 @@
 .chartjs-render-monitor{
 	height:300px;
 }
+.a-graph{
+	width:80%;
+	display:inline;
+}
+.tracker-option{
+	width:20%;
+	float:right;
+	display:inline;
+	height:100%;
+}

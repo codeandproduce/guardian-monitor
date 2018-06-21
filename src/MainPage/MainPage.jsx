@@ -5,13 +5,12 @@ import OneDeviceTracking from './../OneDeviceTracking/OneDeviceTracking';
 import UserBriefProfile from './../UserBriefProfile/UserBriefProfile';
 
 function template() {
-  return (
-    <div className="main-page">
-    	<UserBriefProfile />
-    	<OneDeviceTracking device_use={"Heart Rate"} device_id={12}/>
-    	<OneDeviceTracking device_use={"Oximeter"} device_id={14}/>
-    </div>
-  );
+  	return (
+	    <div className="main-page">
+	    	<UserBriefProfile />
+	    	{ this.loadEachTracker() }
+	    </div>
+  	);
 };
 
 export default template;
