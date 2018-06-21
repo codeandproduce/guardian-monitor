@@ -17,6 +17,7 @@ function template() {
 				options={{
 					maintainAspectRatio: false,
 					lineTension: 0,
+					animation: false,
 					scales: {
 		                yAxes : [{
 		                    ticks : {

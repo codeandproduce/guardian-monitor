@@ -32,8 +32,8 @@ class OneDeviceTracking extends React.Component {
 	componentDidMount() {
 	  this.interval = setInterval(() => {
 	  	var data1 = this.state.data.datasets[0].data.slice(0);
-	  	data1.shift();
-	  	data1.push(Math.random()*20 + 100);
+	  	data1.unshift(Math.random()*20 + 100);
+	  	data1.pop();
 	  	this.setState({data: {
 				labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
 				datasets: [{
@@ -48,7 +48,7 @@ class OneDeviceTracking extends React.Component {
 				}]
 			}
 		});
-	  }, 200);
+	  }, 1000);
 	}
 	componentWillUnmount() {
 	  clearInterval(this.interval);
