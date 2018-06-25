@@ -39,3 +39,20 @@
 	text-align: center;
 	font-size:25px;
 }
+
+.submit-threshold-value-btn{
+	padding:15px 25px;
+
+	border: 2px solid white;
+	display:block;
+	margin:auto;
+	margin-top:30px;
+	font-size: 16px;
+	background-color: #465298;
+	color:white;
+	cursor: pointer;
+}
+.submit-threshold-value-btn:hover{
+	color:#465298;
+	background-color: white;
+}

@@ -1,5 +1,27 @@
 import React    from "react";
-import template from "./OneDeviceTracking.jsx";
+import "./OneDeviceTracking.css";
+import Modal from 'react-modal';
+import UserInputAnalysisConfigModal from './../UserInputAnalysisConfigModal/UserInputAnalysisConfigModal';
+
+
+
+
+import {Line} from 'react-chartjs-2';
+
+
+
+
+const customStyles = {
+  content : {
+    top                   : '50%',
+    left                  : '50%',
+    right                 : 'auto',
+    bottom                : 'auto',
+    marginRight           : '-50%',
+    transform             : 'translate(-50%, -50%)'
+  }
+};
+
 
 
 
@@ -23,7 +45,10 @@ class OneDeviceTracking extends React.Component {
 						pointHighlightStroke: "rgba(220,220,220,1)",
 						data: this.props.dataValues
 					}]
-			}
+			},
+			userInputThreshold: null,
+			userInputConfigModalIsOpen: false
+
 		};
 
 	}
@@ -35,9 +60,74 @@ class OneDeviceTracking extends React.Component {
   			this.setState({data: data11});
   		}
 	}
+
+	userInputButtonClicked(){
+		this.openUserInputConfigModal();
+		console.log(this.state.userInputThreshold);
+	}
+	algorithmButtonClicked(){
+		this.algorithmButtonClicked();
+	}	
+	openUserInputConfigModal() {
+    	this.setState({userInputConfigModalIsOpen: true});
+	}
+	closeUserInputConfigModal() {
+		this.setState({userInputConfigModalIsOpen: false});
+	}
+
+	thresholdSubmitted(thresholdVal){
+		this.setState({userInputThreshold: thresholdVal});
+		// function to upload to database
+	}
+
+
 	
 	render() {
-    	return template.call(this);
+    	return (
+		    <div className="one-device-tracking">
+		      	<h1 className="tracker-identification">{this.props.device_use} | Device ID: {this.props.device_id}</h1>
+				<div className="contain-graph">
+					<Line
+						className="a-graph"
+						data={this.state.data}
+						width={'100px'}
+						height={'300px'}
+						options={{
+							maintainAspectRatio: false,
+							lineTension: 0,
+							scales: {
+				                yAxes : [{
+				                    ticks : {
+				                        max : 120,    
+				                        min : 80
+				                    }
+				                }]
+				            },
+					}}/>
+				</div>
+				<div className="line-break"></div>
+				<div className="contain-options">
+					<button onClick={() => {this.userInputButtonClicked()}} class="analysis-option user-input-analysis">
+						<p>Manual Threshold Input</p>
+					</button>
+					<button onClick={() => {this.algorithmButtonClicked()}} class="analysis-option algorithm-analysis">
+						<p>Apply Anomaly Detection Algorithm</p>
+					</button>
+					
+				</div>
+
+				<Modal
+		          isOpen={this.state.userInputConfigModalIsOpen}
+		          onRequestClose={this.closeUserInputConfigModal.bind(this)}
+		          style={customStyles}
+		          contentLabel="Example Modal"
+		          overlayClassName="overlay">
+		        	<UserInputAnalysisConfigModal thresholdSubmitted={this.thresholdSubmitted.bind(this)}/>
+        		</Modal>
+
+			</div>
+
+		);
 	}
 }
 

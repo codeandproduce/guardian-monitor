@@ -5,6 +5,7 @@ class Nav extends React.Component {
 
 	newDeviceButtonClick(event){
 		this.props.navOpenModalCallback();
+		
 	}
 	render() {
     	return template.call(this);

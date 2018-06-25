@@ -1,0 +1,45 @@
+.modal-box{
+	font-weight:100;
+	padding:70px 120px;
+	background-color:#465298;
+	border:3px solid white;
+	text-align: center;
+
+}
+.ReactModal__Content--after-open{
+	background:none !important;
+	border:none !important;
+}
+.modal-box-heading{
+	font-size:40px;
+	color:white;
+	width:100%;
+	text-align: center;
+	font-weight:100 !important;
+
+}
+
+.set-threshold-value{
+	margin-top:30px;
+}
+
+.set-threshold-value > label{
+	color:white;
+	width:100%;
+	text-align: center;
+	font-size:25px;
+	font-weight:100 !important;
+}
+
+
+.set-threshold-value > input{
+	display:block;
+	margin: auto;
+	margin-top:10px;
+	color:black;
+	width:120px;
+	padding:5px;
+	text-align: center;
+	font-size:25px;
+	border:none;
+}

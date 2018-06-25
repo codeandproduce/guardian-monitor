@@ -1,4 +1,4 @@
-import "./ModalBox.css";
+import "./ConnectNewDeviceModal.css";
 import React from "react";
 
 function template() {

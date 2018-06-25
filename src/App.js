@@ -4,7 +4,7 @@ import './App.css';
 
 import Nav from './partials/Nav/Nav';
 import MainPage from './MainPage/MainPage';
-import ModalBox from './ModalBox/ModalBox';
+import ConnectNewDeviceModal from './ConnectNewDeviceModal/ConnectNewDeviceModal';
 
 import Modal from 'react-modal';
 
@@ -56,7 +56,7 @@ class App extends Component {
           contentLabel="Example Modal"
           overlayClassName="overlay"
         >
-        	<ModalBox />
+        	<ConnectNewDeviceModal />
         </Modal>
       </div>
     );

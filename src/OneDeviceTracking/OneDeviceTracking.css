@@ -4,7 +4,22 @@
 	border-radius:10px;
 	margin-bottom:20px;
 	padding:40px;
+	height:470px;
 }
+.contain-graph{
+	width:80%;
+	left:0;
+}
+.line-break{
+	display:inline-block;
+	width:1.5px;
+	border-radius: 80px;
+	margin-left:50px;
+	height:80%;
+	margin-bottom: 3%;
+	background-color: rgba(0,0,0,0.6);
+}
+
 .tracker-identification{
 	color:#475769;
 	font-weight:100;
@@ -16,14 +31,48 @@
 }
 .chartjs-render-monitor{
 	height:300px;
+	margin-bottom: 40px;
 }
 .a-graph{
 	width:80%;
 	display:inline;
 }
-.tracker-option{
-	width:20%;
-	float:right;
-	display:inline;
-	height:100%;
+
+
+/*	<div className="contain-options">
+				<div className="analysis-user-input-button"></div>
+				<div className="analysis-algorithm-button"></div>	*/
+
+
+.contain-graph{
+	display:inline-block;
 }
+.contain-options{
+	display:inline-block;
+	float:right;
+	height:100%;
+	margin-top: 3%;
+	padding-right:20px;
+
+}
+
+.analysis-option{
+	width:120px;
+	height:120px;
+	background-color: #606dbc;
+	display:block;
+	color:white;
+	margin: auto;
+	border-radius: 5px;
+	margin-bottom:15px;
+}
+.analysis-option > p{
+	font-size: 14px;
+}
+
+.user-input-analysis{
+	background-color: #00a390;
+}
+
+
+
