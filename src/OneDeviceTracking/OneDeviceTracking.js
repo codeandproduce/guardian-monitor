@@ -5,11 +5,10 @@ import UserInputAnalysisConfigModal from './../UserInputAnalysisConfigModal/User
 
 
 
-
 import {Line} from 'react-chartjs-2';
 
 
-
+import 'chartjs-plugin-annotation';
 
 const customStyles = {
   content : {
@@ -103,6 +102,31 @@ class OneDeviceTracking extends React.Component {
 				                    }
 				                }]
 				            },
+				            plugins:{
+					         	annotation: {
+							        events: ["click"],
+							        annotations: [
+							          {
+							            drawTime: "afterDatasetsDraw",
+							            id: "hline",
+							            type: "line",
+							            mode: "horizontal",
+							            scaleID: "y-axis-0",
+							            value: 30,
+							            borderColor: "black",
+							            borderWidth: 5,
+							            label: {
+							              backgroundColor: "red",
+							              content: "Test Label",
+							              enabled: true
+							            },
+							            onClick: function(e) {
+							              // The annotation is is bound to the `this` variable
+							              console.log("Annotation", e.type, this);
+							            }
+							          }]
+							     }
+							}
 					}}/>
 				</div>
 				<div className="line-break"></div>
