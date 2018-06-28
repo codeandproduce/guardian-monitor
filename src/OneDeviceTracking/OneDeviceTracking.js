@@ -104,15 +104,14 @@ class OneDeviceTracking extends React.Component {
 				            },
 				            plugins:{
 					         	annotation: {
-							        events: ["click"],
 							        annotations: [
 							          {
 							            drawTime: "afterDatasetsDraw",
 							            id: "hline",
 							            type: "line",
 							            mode: "horizontal",
-							            scaleID: "y-axis-0",
-							            value: 30,
+							            scaleID: "y-axis-1",
+							            value: 100,
 							            borderColor: "black",
 							            borderWidth: 5,
 							            label: {
@@ -148,7 +147,7 @@ class OneDeviceTracking extends React.Component {
 		          overlayClassName="overlay">
 		        	<UserInputAnalysisConfigModal thresholdSubmitted={this.thresholdSubmitted.bind(this)}/>
         		</Modal>
-
+        	
 			</div>
 
 		);

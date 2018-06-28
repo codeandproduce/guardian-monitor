@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "^0.18.0",
     "chart.js": "^2.7.2",
     "chartjs-plugin-annotation": "^0.5.7",
     "react": "^16.4.1",
@@ -11,7 +12,8 @@
     "react-d3": "^0.4.0",
     "react-dom": "^16.4.1",
     "react-modal": "^3.4.5",
-    "react-scripts": "1.1.4"
+    "react-scripts": "1.1.4",
+    "twilio": "^3.17.4"
   },
   "scripts": {
     "start": "react-scripts start",
